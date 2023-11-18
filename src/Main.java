@@ -5,23 +5,24 @@ public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = CheckN(s);
-
         int[] array = new int[n];
 
-        for(int i=0; i<n; i++){
-            array[i] = s.nextInt();
-        }
-
-        Sorter(array);
+        InputData(array,s);
+        SortData(array);
         DisplayData(array);
 
+    }
+    public static void InputData(int[] arr, Scanner s){
+        for(int i=0; i<arr.length; i++){
+            arr[i] = s.nextInt();
+        }
     }
     public static void DisplayData(int[] arr){
         for (int data : arr){
             System.out.print(data + " ");
         }
     }
-    public static void Sorter(int[] arr){
+    public static void SortData(int[] arr){
         Arrays.sort(arr);
     }
 
